@@ -1,14 +1,19 @@
 package com.example.vendingmachine;
 
-public class idleState implements State{
+public class IdleState implements State{
+
     @Override
-    public void takeCoinsButton(VendingMachine vendingMachine) {
+    public void takeCoinsButton(VendingMachine vendingMachine)
+    {
+        vendingMachine.
         System.out.println("The Vending Machine has been started.");
         vendingMachine.changeState(new HasMoneyState());
     }
-
+    /*
+        These methods are not a part of the current state.
+    */
     @Override
-    public void insertCoins(VendingMachine vendingMachine) {
+    public void insertCoins(VendingMachine vendingMachine, Coin coin) {
         System.out.println("Yu cant do it.");
     }
 
@@ -28,7 +33,7 @@ public class idleState implements State{
     }
 
     @Override
-    public void dispenseButton(VendingMachine vendingMachine) {
+    public void dispenseButton(VendingMachine vendingMachine, int codeNumber) {
         System.out.println("Yu cant do it.");
     }
 }
